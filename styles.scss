@@ -1,0 +1,259 @@
+/*********************
+VARIABLES
+*********************/
+
+$titlegray: #E5D0D0;
+$inactivegray: #DBDBDB;
+$bggray: #F5F5F5;
+$darkgray: #79CBB9;
+$fontblack: #535353;
+$roboto: 'Roboto', sans;
+
+/*********************
+SETUP
+*********************/
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  font-size: 24px;
+}
+
+body {
+  background-color: $bggray;
+  font-family: $roboto;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6,ul,li,p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*********************
+TO-DO WRAPPER
+*********************/
+
+#todoWrapper {
+  max-width: 600px;
+  margin: 50px auto;
+
+  #todoTitle {
+    text-align: center;
+    padding: 20px 0;
+
+    h1 {
+      font-size: 3.5rem;
+      font-weight: lighter;
+    }
+  }
+}
+
+#todo {
+  background-color: tomato;
+  -webkit-box-shadow: 0px 3px 15px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 3px 15px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 3px 15px 0px rgba(0,0,0,0.75);
+  color: $fontblack;
+}
+
+/*********************
+TO-DO INPUT BLOCK
+*********************/
+
+#todoInputBlock {
+  background-color: white;
+  padding: 18px 0;
+  border-bottom: 3px solid $inactivegray;
+  display: flex;
+
+  #todoInputLeft {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+
+    span {
+      color: $inactivegray;
+    }
+  }
+
+  #todoInputRight {
+    width: 90%;
+
+    input {
+      width: 100%;
+      border: 0;
+      font-weight: lighter;
+      color: $fontblack;
+
+      &:focus {
+        outline: 0;
+      }
+
+      &::-webkit-input-placeholder {
+        color: $inactivegray;
+      }
+
+      &:-moz-placeholder {
+        color: $inactivegray;
+      }
+
+      &::-moz-placeholder {
+        color: $inactivegray;
+      }
+
+      &:-ms-input-placeholder {
+        color: $inactivegray;
+      }
+    }
+  }
+}
+
+/*********************
+TO-DO TASK BLOCK
+*********************/
+
+#todoTaskBlock {
+
+  .todoTask {
+    height: 65px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $inactivegray;
+
+    .todoTaskLeft {
+      background: white;
+      width: 10%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .taskLeftCircle {
+        padding: 3px;
+        border: 2px solid $inactivegray;
+        border-radius: 50%;
+        position: relative;
+        height: 35px;
+        width: 35px;
+        cursor: pointer;
+
+        div {
+          position: absolute;
+          margin: auto;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          span {
+            display: none;
+            color: $darkgray;
+            font-size: .9rem;
+          }
+
+          span.checked {
+            display: block;
+          }
+        }
+      }
+    }
+
+    .todoTaskRight {
+      background: white;
+      width: 90%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+
+      .taskRightText {
+        font-weight: lighter;
+        height: 100%;
+        width: 100%;
+        border: 0;
+
+        &:focus {
+          outline: 0;
+        }
+      }
+
+      .taskRightText.completed {
+        color: $inactivegray;
+        text-decoration: line-through;
+      }
+    }
+  }
+}
+
+/*********************
+TO-DO SETTINGS BLOCK
+*********************/
+
+#todoSettingsBlock {
+  background-color: white;
+  color: $darkgray;
+  font-weight: lighter;
+  font-size: .70rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 12px 0;
+
+  > div {
+
+  }
+
+  #todoSettingsLeft {
+    width: 24%;
+  }
+
+  #todoSettingsMiddle {
+    width: 35%;
+    display: flex;
+    justify-content: space-between;
+
+    > div {
+      padding: 4px;
+      cursor: pointer;
+    }
+
+    .settingsActive {
+      border: 1px solid $inactivegray;
+    }
+  }
+
+  #todoSettingsRight {
+    width: 24%;
+    text-align: center;
+
+    #settingsRightClear {
+      cursor: pointer;
+      padding: 4px;
+      -webkit-transition: all .25s ease;
+      transition: all .25s ease;
+
+      &:hover {
+        background-color: $fontblack;
+        color: white;
+      }
+    }
+  }
+}

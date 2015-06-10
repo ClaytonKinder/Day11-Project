@@ -1,0 +1,175 @@
+/*********************
+VARIABLES
+*********************/
+/*********************
+SETUP
+*********************/
+html, body {
+  height: 100%;
+  width: 100%; }
+
+html {
+  font-size: 24px; }
+
+body {
+  background-color: #F5F5F5;
+  font-family: "Roboto", sans; }
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box; }
+
+h1, h2, h3, h4, h5, h6, ul, li, p {
+  margin: 0;
+  padding: 0; }
+
+img {
+  max-width: 100%; }
+
+a {
+  text-decoration: none; }
+
+/*********************
+TO-DO WRAPPER
+*********************/
+#todoWrapper {
+  max-width: 600px;
+  margin: 50px auto; }
+  #todoWrapper #todoTitle {
+    text-align: center;
+    padding: 20px 0; }
+    #todoWrapper #todoTitle h1 {
+      font-size: 3.5rem;
+      font-weight: lighter; }
+
+#todo {
+  background-color: tomato;
+  -webkit-box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.75);
+  color: #535353; }
+
+/*********************
+TO-DO INPUT BLOCK
+*********************/
+#todoInputBlock {
+  background-color: white;
+  padding: 18px 0;
+  border-bottom: 3px solid #DBDBDB;
+  display: flex; }
+  #todoInputBlock #todoInputLeft {
+    width: 10%;
+    display: flex;
+    justify-content: center; }
+    #todoInputBlock #todoInputLeft span {
+      color: #DBDBDB; }
+  #todoInputBlock #todoInputRight {
+    width: 90%; }
+    #todoInputBlock #todoInputRight input {
+      width: 100%;
+      border: 0;
+      font-weight: lighter;
+      color: #535353; }
+      #todoInputBlock #todoInputRight input:focus {
+        outline: 0; }
+      #todoInputBlock #todoInputRight input::-webkit-input-placeholder {
+        color: #DBDBDB; }
+      #todoInputBlock #todoInputRight input:-moz-placeholder {
+        color: #DBDBDB; }
+      #todoInputBlock #todoInputRight input::-moz-placeholder {
+        color: #DBDBDB; }
+      #todoInputBlock #todoInputRight input:-ms-input-placeholder {
+        color: #DBDBDB; }
+
+/*********************
+TO-DO TASK BLOCK
+*********************/
+#todoTaskBlock .todoTask {
+  height: 65px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #DBDBDB; }
+  #todoTaskBlock .todoTask .todoTaskLeft {
+    background: white;
+    width: 10%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    #todoTaskBlock .todoTask .todoTaskLeft .taskLeftCircle {
+      padding: 3px;
+      border: 2px solid #DBDBDB;
+      border-radius: 50%;
+      position: relative;
+      height: 35px;
+      width: 35px;
+      cursor: pointer; }
+      #todoTaskBlock .todoTask .todoTaskLeft .taskLeftCircle div {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+        #todoTaskBlock .todoTask .todoTaskLeft .taskLeftCircle div span {
+          display: none;
+          color: #79CBB9;
+          font-size: .9rem; }
+        #todoTaskBlock .todoTask .todoTaskLeft .taskLeftCircle div span.checked {
+          display: block; }
+  #todoTaskBlock .todoTask .todoTaskRight {
+    background: white;
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center; }
+    #todoTaskBlock .todoTask .todoTaskRight .taskRightText {
+      font-weight: lighter;
+      height: 100%;
+      width: 100%;
+      border: 0; }
+      #todoTaskBlock .todoTask .todoTaskRight .taskRightText:focus {
+        outline: 0; }
+    #todoTaskBlock .todoTask .todoTaskRight .taskRightText.completed {
+      color: #DBDBDB;
+      text-decoration: line-through; }
+
+/*********************
+TO-DO SETTINGS BLOCK
+*********************/
+#todoSettingsBlock {
+  background-color: white;
+  color: #79CBB9;
+  font-weight: lighter;
+  font-size: .70rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 12px 0; }
+  #todoSettingsBlock #todoSettingsLeft {
+    width: 24%; }
+  #todoSettingsBlock #todoSettingsMiddle {
+    width: 35%;
+    display: flex;
+    justify-content: space-between; }
+    #todoSettingsBlock #todoSettingsMiddle > div {
+      padding: 4px;
+      cursor: pointer; }
+    #todoSettingsBlock #todoSettingsMiddle .settingsActive {
+      border: 1px solid #DBDBDB; }
+  #todoSettingsBlock #todoSettingsRight {
+    width: 24%;
+    text-align: center; }
+    #todoSettingsBlock #todoSettingsRight #settingsRightClear {
+      cursor: pointer;
+      padding: 4px;
+      -webkit-transition: all .25s ease;
+      transition: all .25s ease; }
+      #todoSettingsBlock #todoSettingsRight #settingsRightClear:hover {
+        background-color: #535353;
+        color: white; }
+
+/*# sourceMappingURL=styles.css.map */

@@ -3,13 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <title>To-Do</title>
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,100' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="bower_components/normalize.css/normalize.css">
   <link rel="stylesheet" type="text/css" href="bower_components/octicons/octicons/octicons.css">
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-
-
+  <div id="todoWrapper">
+    <div id="todoTitle">
+      <h1>Todos</h1>
+    </div>
+    <div id="todo">
+      <div id="todoInputBlock">
+        <div id="todoInputLeft">
+          <span class="mega-octicon octicon-chevron-down"></span>
+        </div>
+        <div id="todoInputRight">
+          <form id="todoInputForm">
+            <input id="todoInput" type="text" name="todoInput" placeholder="What needs to be done?">
+          </form>
+        </div>
+      </div>
+      <div id="todoTaskBlock">
+        <!-- todoTASK blocks go here -->
+      </div>
+      <div id="todoSettingsBlock">
+        <div id="todoSettingsLeft">
+          <div id="settingsLeftRemain">
+            <span id="numLeft"></span> tasks left
+          </div>
+        </div>
+        <div id="todoSettingsMiddle">
+          <div id="settingsMiddleAll" class="middleSetting settingsActive">
+            All
+          </div>
+          <div id="settingsMiddleActive" class="middleSetting">
+            Active
+          </div>
+          <div id="settingsMiddleCompleted" class="middleSetting">
+            Completed
+          </div>
+        </div>
+        <div id="todoSettingsRight">
+          <div id="settingsRightClear">
+            Clear completed
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/underscore/underscore-min.js"></script>
