@@ -1,0 +1,23 @@
+{
+  "name": "Day11-Project",
+  "version": "0.0.0",
+  "authors": [
+    "Clayton Kinder <ClaytonAlanKinder@gmail.com>"
+  ],
+  "description": "A simple to-do list.",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "octicons": "~2.4.1",
+    "underscore": "~1.8.3",
+    "normalize.css": "~3.0.3"
+  }
+}
