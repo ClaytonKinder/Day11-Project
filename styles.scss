@@ -89,6 +89,14 @@ TO-DO INPUT BLOCK
 
     span {
       color: $inactivegray;
+      transition: all .25s ease;
+      -webkit-transition: all .25s ease;
+    }
+
+    span.rotate {
+      -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      transform: rotate(-90deg);
     }
   }
 
@@ -121,6 +129,7 @@ TO-DO INPUT BLOCK
         color: $inactivegray;
       }
     }
+
   }
 }
 

@@ -62,7 +62,13 @@ TO-DO INPUT BLOCK
     display: flex;
     justify-content: center; }
     #todoInputBlock #todoInputLeft span {
-      color: #DBDBDB; }
+      color: #DBDBDB;
+      transition: all .25s ease;
+      -webkit-transition: all .25s ease; }
+    #todoInputBlock #todoInputLeft span.rotate {
+      -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      transform: rotate(-90deg); }
   #todoInputBlock #todoInputRight {
     width: 90%; }
     #todoInputBlock #todoInputRight input {
