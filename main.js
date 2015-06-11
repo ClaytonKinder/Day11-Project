@@ -13,6 +13,15 @@ var page = {
     page.loadTasks();
   },
   initEvents: function () {
+    $( "#todoInput" ).focusin(function() {
+      $(this).closest('#todo').find('.octicon-chevron-down').addClass('rotate');
+    });
+    $( "#todoInput" ).focusout(function() {
+      $(this).closest('#todo').find('.octicon-chevron-down').removeClass('rotate');
+    });
+
+
+
     $('#todoInputRight').on('submit', '#todoInputForm', page.addTask);
     $('#todoTaskBlock').on('click', '.taskLeftCircle', function(e){
       e.preventDefault();
@@ -144,14 +153,12 @@ var page = {
         url: page.url + "/" + deleteData[idx],
         method: 'DELETE',
         success: function (data) {
-
+          page.loadTasks();
+          page.removeCompleted();
+          console.log('Deleted');
         }
       });
     });
-
-    page.loadTasks();
-    page.removeCompleted();
-
   },
   addTask: function (event) {
     event.preventDefault();
@@ -185,7 +192,6 @@ var page = {
   removeActive: function(elements) {
     $('.todoTask').each(function(el) {
       if ($(this).attr('rel') === 'false') {
-        console.log('Removed active!');
         $(this).remove();
       }
     });
